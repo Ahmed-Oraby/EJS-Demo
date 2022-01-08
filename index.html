@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EJS - Demo</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div id="input">
+				<h2>Quantity</h2>
+				<label for="quantity">Type here: </label>
+				<input type="number" name="quantity" id="quantity" />
+				<div class="object">OBJ1</div>
+			</div>
+			<div id="output"></div>
+		</div>
+
+		<script src="ejs.js"></script>
+		<script>
+			const input = document.getElementById("input");
+			const output = document.getElementById("output");
+
+			input.addEventListener("input", quantity);
+
+			function quantity(e) {
+				let number = e.target.value;
+				let html = "";
+				for (let i = 1; i <= number; i++) {
+					html += ejs.render(
+						'<div class="box"><div class="circle"> <%= i %></div></div>',
+						{ i: i }
+					);
+				}
+				output.innerHTML = "";
+				output.innerHTML = html;
+			}
+		</script>
+	</body>
+</html>

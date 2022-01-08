@@ -1,0 +1,63 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	height: 90vh;
+	width: 70vw;
+	margin: auto;
+	padding: 50px;
+}
+
+#input {
+	background-color: rgb(190, 190, 190);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 20%;
+	border: 1px solid gray;
+	padding-bottom: 50px;
+	position: relative;
+}
+
+#input input {
+	width: 70%;
+	align-self: center;
+}
+
+#output {
+	background-color: rgb(226, 219, 219);
+	width: 70%;
+	text-align: center;
+	border: 1px solid gray;
+	padding-top: 20px;
+	overflow-y: scroll;
+}
+
+.object {
+	position: absolute;
+	border: 1px solid gray;
+	bottom: 0;
+	left: 0;
+	padding: 15px;
+	background-color: rgb(190, 190, 190);
+}
+
+.box {
+	width: 80%;
+	background-color: rgb(172, 170, 170);
+	text-align: center;
+	margin: auto;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.circle {
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background-color: rgb(226, 219, 219);
+	font-size: 32px;
+}
